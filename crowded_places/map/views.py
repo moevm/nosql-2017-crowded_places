@@ -7,6 +7,5 @@ def index(request):
     template = loader.get_template('map/map_page.html')
     context = {}
     return HttpResponse(template.render(context, request))
-    #return HttpResponse("Request1")
 
 

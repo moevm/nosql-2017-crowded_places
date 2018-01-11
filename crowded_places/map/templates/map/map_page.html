@@ -9,11 +9,21 @@
         width: 100%;
        }
     </style>
-    <!-- <link href="../static/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <h3>My Google Maps Demo</h3>
     <div id="map"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+              <button type="button" class="btn btn-secondary btn-lg">Load from VK</button>
+            </div>
+            <div class="col-sm">
+                <button type="button" class="btn btn-secondary btn-lg">Search</button>
+            </div>
+        </div>
+    </div>
     <script>
       function initMap() {
         var uluru = {lat: -25.363, lng: 131.044};

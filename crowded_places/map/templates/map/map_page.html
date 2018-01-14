@@ -6,15 +6,33 @@
     <style>
        #map {
         height: 400px;
-        width: 100%;
+        width: 700px;
+           margin: auto;
        }
     </style>
-    <!-- <link href="../static/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<h3>My Google Maps Demo</h3>
+<h3 style="margin: auto">My Google Maps Demo</h3>
     <div id="map"></div>
+    <div class="container">
+       <div class="row">
+           <input type="text" size="100" id="search">
+            <div class="col-sm">
+              <a href="add" type="button" class="btn btn-secondary btn-lg">Load from VK</a>
+            </div>
+            <div class="col-sm">
+                <button id="bt" type="button" class="btn btn-secondary btn-lg">Search</button>
+            </div>
+        </div>
+    </div>
     <script>
+        function f(){
+            var text = document.getElementById("search").value;
+            <!-- alert(text); -->
+            window.open("search?text="+text);
+        }
+        document.getElementById("bt").onclick = f;
       function initMap() {
         var uluru = {lat: -25.363, lng: 131.044};
         var map = new google.maps.Map(document.getElementById('map'), {
